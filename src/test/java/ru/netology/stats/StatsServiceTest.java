@@ -23,8 +23,8 @@ class StatsServiceTest {
 
     @Test
     void shouldMonthMaximumSalesForAllMonths() {
-        String expected = "6, 8";
-        String actual = StatsService.monthMaximumSales(months);
+        int expected = 8;
+        int actual = StatsService.monthMaximumSales(months);
         assertEquals(expected, actual);
     }
 
@@ -38,14 +38,14 @@ class StatsServiceTest {
     @Test
     void shouldSalesBelowAverageForHowManyOfAllMonths() {
         int expected = 5;
-        int actual = StatsService.salesBelowAverage(months, StatsService.average(months));
+        int actual = StatsService.salesBelowAverage(months);
         assertEquals(expected, actual);
     }
 
     @Test
     void shouldSalesAboveAverageForHowManyOfAllMonths() {
         int expected = 5;
-        int actual = StatsService.salesAboveAverage(months, StatsService.average(months));
+        int actual = StatsService.salesAboveAverage(months);
         assertEquals(expected, actual);
     }
 }
